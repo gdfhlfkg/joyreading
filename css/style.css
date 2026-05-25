@@ -202,6 +202,16 @@ body {
 .search-wrapper[data-page="admin"] .search-input { border-color: var(--ink-secondary); box-shadow: 0 0 0 1px rgba(107, 98, 90, 0.1); }
 .search-wrapper[data-page="admin"] .search-icon { color: var(--ink-secondary); }
 
+/* 隐藏搜索栏的页面（导入、同步、书签） */
+.search-wrapper[data-page="import"],
+.search-wrapper[data-page="sync"],
+.search-wrapper[data-page="bookmarks"] {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 200ms var(--ease-out), opacity 200ms var(--ease-out);
+}
+
 .search-clear {
   position: absolute;
   right: 12px;
